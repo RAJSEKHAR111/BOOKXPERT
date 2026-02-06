@@ -1,6 +1,6 @@
 # BOOKXPERT
 
-# AI Assignment: Name Matcher & Recipe Chatbot (Zero to Hero)
+# AI Assignment: Name Matcher & Recipe Chatbot
 
 This repository contains a complete solution for the AI Assignment. It features two main components:
 1.  **Task 1: Name Matching System** - Uses fuzzy logic to find similar names from a dataset.
