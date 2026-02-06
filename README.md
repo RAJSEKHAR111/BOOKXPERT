@@ -11,7 +11,8 @@ This repository contains a complete solution for the AI Assignment. It features 
 Ensure your project folder is organized as follows:
 
 ```text
-AI_Assignment/
+
+BOOKXPERT/
 │
 ├── requirements.txt          # Project dependencies (FastAPI, Streamlit, Torch, etc.)
 ├── task1_matcher.py          # Script for Task 1: Name Matching
@@ -22,57 +23,49 @@ AI_Assignment/
 └── README.md                 # Project documentation
 
 
-🛠️ Step 1: Environment Setup (Zero to Hero)
-Before running the code, you must set up a clean Python environment. This ensures all dependencies work correctly without affecting your system.
+🛠️ Step 1: Environment Setup
+Before running any code, you must set up a clean Python environment to avoid conflicts.
 
-1. Check Python Version
+1.1 Create the Virtual Environment
 
-Ensure you have Python 3.8 or higher installed.
+Open your terminal in the project folder and run the command for your OS:
 
-python --version
-# OR
-python3 --version
-
-2. Create a Virtual Environment
-
-Run the command appropriate for your operating system:
-
-For Windows:
+Windows:
 
 Bash
 python -m venv venv
-For Mac / Linux:
+Mac / Linux:
 
 Bash
 python3 -m venv venv
-(Note for Linux users: If this fails, run sudo apt install python3-venv first).
+(Note: If Linux fails, try sudo apt install python3-venv first).
 
-3. Activate the Environment
+1.2 Activate the Environment
 
-You must activate the environment every time you open a new terminal to work on this project.
+You must activate the environment every time you open a new terminal.
 
-For Windows:
+Windows:
 
 Bash
 .\venv\Scripts\activate
-For Mac / Linux:
+Mac / Linux:
 
 Bash
 source venv/bin/activate
-Successful activation is indicated by (venv) appearing at the start of your command line.
+Success Check: You should see (venv) at the start of your command line.
 
-4. Install Dependencies
+1.3 Install Dependencies
 
-With the environment active, install the required libraries:
+Install all required libraries including trl to ensure smooth execution:
 
 Bash
 pip install -r requirements.txt
-🚀 Step 2: How to Run Task 1 (Name Matcher)
+🚀 Step 2: Run Task 1 (Name Matcher)
 Objective: Input a name and get the most similar matches from the dataset.
 
-Open your terminal and ensure (venv) is active.
+Ensure your terminal has (venv) active.
 
-Run the script:
+Run the matcher script:
 
 Bash
 python task1_matcher.py
@@ -80,46 +73,45 @@ Verification:
 
 Input: Type Geeta
 
-Output: The system should return Best Match: Geetha with a high similarity score.
+Output: The system should return Best Match: Geetha along with a similarity score.
 
-🍳 Step 3: How to Run Task 2 (Recipe Chatbot)
+🍳 Step 3: Run Task 2 (Recipe Chatbot)
 Objective: A chatbot that suggests recipes based on ingredients (e.g., "Egg, Onion").
 
-Important: This task requires two separate terminals running simultaneously (one for the Backend API, one for the Frontend UI).
+Important: This task requires two separate terminals running at the same time.
 
-Terminal 1: Start the Backend (API)
+3a. Start the Backend (Terminal 1)
 
 Open a new terminal window.
 
-Activate the environment (source venv/bin/activate or .\venv\Scripts\activate).
+Activate the environment (.\venv\Scripts\activate or source venv/bin/activate).
 
-Run the FastAPI server:
+Run the API server:
 
 Bash
 uvicorn task2_api:app --reload
 Wait for the message: Application startup complete.
 
-The API is now live at http://127.0.0.1:8000
+The backend is now live at http://127.0.0.1:8000
 
-Terminal 2: Start the Frontend (UI)
+3b. Start the Frontend (Terminal 2)
 
-Open a second terminal window.
+Open a second new terminal window.
 
 Activate the environment again.
 
-Run the Streamlit app:
+Run the UI app:
 
 Bash
 streamlit run task2_ui.py
-This command will automatically open your web browser to the Chatbot interface.
+This will automatically open your browser to the Chatbot.
 
-If it doesn't open automatically, visit http://localhost:8501 in your browser.
+If not, manually visit http://localhost:8501.
 
 Verification
 
-In the web interface, type Egg, Onion into the chat box.
+In the browser, type Egg, Onion into the chat box.
 
 Press Enter.
 
-Expected Output: The AI Assistant replies with a recipe (e.g., "Scramble the eggs...").
-
+Result: The AI Assistant should reply with a recipe (e.g., "Scramble the eggs...").
