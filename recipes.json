@@ -1,0 +1,6 @@
+[
+  {"input": "Egg, Onion", "output": "Scramble the eggs. Sauté onions in a pan until golden. Mix eggs into onions, add salt and pepper. Cook until fluffy."},
+  {"input": "Chicken, Rice", "output": "Boil the rice. Grill the chicken with spices. Serve chicken over the rice with a side of yogurt."},
+  {"input": "Bread, Cheese", "output": "Place cheese between two slices of bread. Butter the outside. Grill on a pan until golden brown (Grilled Cheese)."},
+  {"input": "Tomato, Pasta", "output": "Boil pasta. Sauté tomatoes with garlic and olive oil to make sauce. Mix pasta with sauce."}
+]
